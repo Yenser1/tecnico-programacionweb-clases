@@ -1,0 +1,26 @@
+section{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 37px;
+}
+section div{
+    border: 3px double white;
+    padding: 10px;
+}
+#solitario{
+    flex: 2;
+    min-width: calc(50% + 1px);
+    background-color: darkolivegreen;
+    border-radius: 10px;
+}
+#container{
+    border: none;
+    flex: 1;
+    min-width: calc(40% + 1px);
+    padding: 0;
+}
+#container div{
+    border: 1px solid white;
+    margin-bottom: 1%;
+    padding: 20px;
+}
