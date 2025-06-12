@@ -1,53 +1,130 @@
 <!DOCTYPE html>
-<html lang="es" style="color-scheme: dark;">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=`, initial-scale=1.0">    
+    <meta name="viewport", initial-scale=1.0">    
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Practica 4 CSS</title>
+    <link rel="shortcut icon" href="Images/PCfavicon.png" type="image/x-icon">
+    <title>Practica 4 CSS - Punta Cana Fun</title>
+    
+    
+    
+
+
+
+    <!--ESTOY USANDO TAILWIND CSS PARA PODER HACER LA TAREA DE FORMA MAS RAPIDA PERO ES FACIL RECREARLO A CSS COMPLETO PROFE-->
+    
+
+
+
+
 </head>
 <style>
+    html::selection{
+        background-color: #333;
+        color: #333;
+    }
     a{
         font-family: monospace;
     }
+    header{
+        background-image: url(Images/FondoPlaya.png);
+        background-size: cover;
+        background-position: top ;
+        mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+    }
+    body{
+        background-image: url(Images/FondoArena.png);
+        background-size: cover;
+        font-family: monospace;
+        
+    }
+    .santo-domingo{
+        background-image: url(Images/SantoDomingoBG.png);
+        background-size: cover;
+    }
+    .buggies{
+        background-image: url(Images/BuggiesBG.png);
+        background-size: cover;
+    }
+    .punta-cana{
+        background-image: url(Images/PuntaCanaBG.png);
+        background-size: cover;
+    }
+    footer{
+        background-image: url(Images/BlurSand.png);
+        background-size: cover;
+        mask-image: linear-gradient(to top, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 60%, transparent 100%);
+    }
+    .eishun{
+        font-size: clamp(2.2rem, calc(1.5vw + 1rem), 5rem);
+    }
+    .paragraf{
+        font-size: clamp(16px, calc(1vw + 1rem - 1rem), 3rem);
+    }
+    .alink{
+        font-size: clamp(16px, 1.7vw, 4rem);
+    }
+    .paragrafbot{
+        font-size: clamp(10px,1vw,5rem);
+    }
+    .copira{
+        font-size: clamp(1rem, 2vw, 5rem);
+    }
 </style>
-<body class="">
-    <header class="h-max w-full bg-[#333] relative">
+<body class="text-white ">
+    <header class="h-max w-full bg-[#87ceeb] relative pb-[3%]">
         <div class="flex flex-col justify-center text-center items-center">
         <a href="">
-            <img src="Images/Punta Cana.png" alt="Logo Punta Cana Fun" class="w-[20vw]">
+            <img style="filter:drop-shadow(0 0 15px #333)" src="Images/Punta Cana.png" alt="Logo Punta Cana Fun" class="w-[20vw] min-w-[200px]">
         </a>
-            <ul class="gap-10 flex text-[1.7vw]">
+            <ul class="gap-10 flex alink">
                 <a href="" class=""><li>Inicio</li></a>
                 <a href=""><li>Acerca de Nosotros</li></a>
-                <ul>Tours ↓
-                    <li></li>
-                    <li></li>
-                    <li></li>
-                </ul>
                 <a href=""><li>Contacto</li></a>
             </ul>
         </div>
-        <span class="absolute right-0 bottom-0">
-            <svg width="3.5vw" height="3.5vw" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6921 5H9.30807C8.15914 5.00635 7.0598 5.46885 6.25189 6.28576C5.44398 7.10268 4.99368 8.20708 5.00007 9.356V14.644C4.99368 15.7929 5.44398 16.8973 6.25189 17.7142C7.0598 18.5311 8.15914 18.9937 9.30807 19H14.6921C15.841 18.9937 16.9403 18.5311 17.7482 17.7142C18.5562 16.8973 19.0064 15.7929 19.0001 14.644V9.356C19.0064 8.20708 18.5562 7.10268 17.7482 6.28576C16.9403 5.46885 15.841 5.00635 14.6921 5Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M8.00012 9C7.58591 9 7.25012 9.33579 7.25012 9.75C7.25012 10.1642 7.58591 10.5 8.00012 10.5V9ZM12.0001 10.5C12.4143 10.5 12.7501 10.1642 12.7501 9.75C12.7501 9.33579 12.4143 9 12.0001 9V10.5ZM11.2501 9.75C11.2501 10.1642 11.5859 10.5 12.0001 10.5C12.4143 10.5 12.7501 10.1642 12.7501 9.75H11.2501ZM12.7501 8C12.7501 7.58579 12.4143 7.25 12.0001 7.25C11.5859 7.25 11.2501 7.58579 11.2501 8H12.7501ZM12.0001 9C11.5859 9 11.2501 9.33579 11.2501 9.75C11.2501 10.1642 11.5859 10.5 12.0001 10.5V9ZM15.5001 10.5C15.9143 10.5 16.2501 10.1642 16.2501 9.75C16.2501 9.33579 15.9143 9 15.5001 9V10.5ZM15.5001 9C15.0859 9 14.7501 9.33579 14.7501 9.75C14.7501 10.1642 15.0859 10.5 15.5001 10.5V9ZM16.0001 10.5C16.4143 10.5 16.7501 10.1642 16.7501 9.75C16.7501 9.33579 16.4143 9 16.0001 9V10.5ZM16.1138 10.1811C16.3519 9.84222 16.2702 9.37443 15.9313 9.13631C15.5923 8.8982 15.1246 8.97992 14.8864 9.31885L16.1138 10.1811ZM11.2737 13.2783C10.9579 13.5464 10.9193 14.0197 11.1874 14.3354C11.4555 14.6512 11.9288 14.6898 12.2445 14.4217L11.2737 13.2783ZM9.29973 14.9003C8.96852 15.149 8.90167 15.6192 9.15041 15.9504C9.39916 16.2816 9.8693 16.3485 10.2005 16.0997L9.29973 14.9003ZM12.2569 14.407C12.5667 14.1321 12.595 13.6581 12.3201 13.3483C12.0453 13.0384 11.5712 13.0101 11.2614 13.285L12.2569 14.407ZM11.1691 14.3091C11.4249 14.6349 11.8963 14.6917 12.2222 14.436C12.548 14.1802 12.6048 13.7088 12.3491 13.3829L11.1691 14.3091ZM11.186 11.4467C11.0185 11.0678 10.5756 10.8966 10.1968 11.0641C9.81796 11.2316 9.64667 11.6745 9.8142 12.0533L11.186 11.4467ZM12.3609 13.4024C12.1137 13.07 11.6439 13.001 11.3115 13.2482C10.9792 13.4954 10.9101 13.9652 11.1573 14.2976L12.3609 13.4024ZM13.8953 16.6608C14.2602 16.8567 14.7149 16.7198 14.9109 16.3548C15.1068 15.9899 14.9699 15.5352 14.605 15.3392L13.8953 16.6608ZM8.00012 10.5H12.0001V9H8.00012V10.5ZM12.7501 9.75V8H11.2501V9.75H12.7501ZM12.0001 10.5H15.5001V9H12.0001V10.5ZM15.5001 10.5H16.0001V9H15.5001V10.5ZM14.8864 9.31885C13.8552 10.7867 12.6412 12.1172 11.2737 13.2783L12.2445 14.4217C13.7091 13.1782 15.0093 11.7532 16.1138 10.1811L14.8864 9.31885ZM10.2005 16.0997C10.7113 15.7161 11.4531 15.1201 12.2569 14.407L11.2614 13.285C10.4871 13.9719 9.77692 14.5419 9.29973 14.9003L10.2005 16.0997ZM12.3491 13.3829C11.8824 12.7884 11.4917 12.1379 11.186 11.4467L9.8142 12.0533C10.1703 12.8586 10.6255 13.6164 11.1691 14.3091L12.3491 13.3829ZM11.1573 14.2976C11.8855 15.2767 12.8203 16.0835 13.8953 16.6608L14.605 15.3392C13.7239 14.8661 12.9578 14.2048 12.3609 13.4024L11.1573 14.2976Z" fill="#fff"></path> </g></svg>
+        <span class="absolute right-0 bottom-10">
+            <svg style="filter:drop-shadow(0 0 15px white)" height="clamp(40px,4vw,3rem)" width="clamp(40px,4vw,3rem)" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M14.6921 5H9.30807C8.15914 5.00635 7.0598 5.46885 6.25189 6.28576C5.44398 7.10268 4.99368 8.20708 5.00007 9.356V14.644C4.99368 15.7929 5.44398 16.8973 6.25189 17.7142C7.0598 18.5311 8.15914 18.9937 9.30807 19H14.6921C15.841 18.9937 16.9403 18.5311 17.7482 17.7142C18.5562 16.8973 19.0064 15.7929 19.0001 14.644V9.356C19.0064 8.20708 18.5562 7.10268 17.7482 6.28576C16.9403 5.46885 15.841 5.00635 14.6921 5Z" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M8.00012 9C7.58591 9 7.25012 9.33579 7.25012 9.75C7.25012 10.1642 7.58591 10.5 8.00012 10.5V9ZM12.0001 10.5C12.4143 10.5 12.7501 10.1642 12.7501 9.75C12.7501 9.33579 12.4143 9 12.0001 9V10.5ZM11.2501 9.75C11.2501 10.1642 11.5859 10.5 12.0001 10.5C12.4143 10.5 12.7501 10.1642 12.7501 9.75H11.2501ZM12.7501 8C12.7501 7.58579 12.4143 7.25 12.0001 7.25C11.5859 7.25 11.2501 7.58579 11.2501 8H12.7501ZM12.0001 9C11.5859 9 11.2501 9.33579 11.2501 9.75C11.2501 10.1642 11.5859 10.5 12.0001 10.5V9ZM15.5001 10.5C15.9143 10.5 16.2501 10.1642 16.2501 9.75C16.2501 9.33579 15.9143 9 15.5001 9V10.5ZM15.5001 9C15.0859 9 14.7501 9.33579 14.7501 9.75C14.7501 10.1642 15.0859 10.5 15.5001 10.5V9ZM16.0001 10.5C16.4143 10.5 16.7501 10.1642 16.7501 9.75C16.7501 9.33579 16.4143 9 16.0001 9V10.5ZM16.1138 10.1811C16.3519 9.84222 16.2702 9.37443 15.9313 9.13631C15.5923 8.8982 15.1246 8.97992 14.8864 9.31885L16.1138 10.1811ZM11.2737 13.2783C10.9579 13.5464 10.9193 14.0197 11.1874 14.3354C11.4555 14.6512 11.9288 14.6898 12.2445 14.4217L11.2737 13.2783ZM9.29973 14.9003C8.96852 15.149 8.90167 15.6192 9.15041 15.9504C9.39916 16.2816 9.8693 16.3485 10.2005 16.0997L9.29973 14.9003ZM12.2569 14.407C12.5667 14.1321 12.595 13.6581 12.3201 13.3483C12.0453 13.0384 11.5712 13.0101 11.2614 13.285L12.2569 14.407ZM11.1691 14.3091C11.4249 14.6349 11.8963 14.6917 12.2222 14.436C12.548 14.1802 12.6048 13.7088 12.3491 13.3829L11.1691 14.3091ZM11.186 11.4467C11.0185 11.0678 10.5756 10.8966 10.1968 11.0641C9.81796 11.2316 9.64667 11.6745 9.8142 12.0533L11.186 11.4467ZM12.3609 13.4024C12.1137 13.07 11.6439 13.001 11.3115 13.2482C10.9792 13.4954 10.9101 13.9652 11.1573 14.2976L12.3609 13.4024ZM13.8953 16.6608C14.2602 16.8567 14.7149 16.7198 14.9109 16.3548C15.1068 15.9899 14.9699 15.5352 14.605 15.3392L13.8953 16.6608ZM8.00012 10.5H12.0001V9H8.00012V10.5ZM12.7501 9.75V8H11.2501V9.75H12.7501ZM12.0001 10.5H15.5001V9H12.0001V10.5ZM15.5001 10.5H16.0001V9H15.5001V10.5ZM14.8864 9.31885C13.8552 10.7867 12.6412 12.1172 11.2737 13.2783L12.2445 14.4217C13.7091 13.1782 15.0093 11.7532 16.1138 10.1811L14.8864 9.31885ZM10.2005 16.0997C10.7113 15.7161 11.4531 15.1201 12.2569 14.407L11.2614 13.285C10.4871 13.9719 9.77692 14.5419 9.29973 14.9003L10.2005 16.0997ZM12.3491 13.3829C11.8824 12.7884 11.4917 12.1379 11.186 11.4467L9.8142 12.0533C10.1703 12.8586 10.6255 13.6164 11.1691 14.3091L12.3491 13.3829ZM11.1573 14.2976C11.8855 15.2767 12.8203 16.0835 13.8953 16.6608L14.605 15.3392C13.7239 14.8661 12.9578 14.2048 12.3609 13.4024L11.1573 14.2976Z" fill="#fff"></path> </g></svg>
         </span>
     </header>
 
 
-    <main >
-        <section class="w-full h-[54dvh] bg-[#eee] text-black">
-            
-        </section>
+    <main  style="text-shadow: 0 0 15px #333">
         <section>
-            <div class="destinos ">
-                <h1 class="text-center text-[2.5vw]">DESTINOS TURISTICOS</h1>
-                <div class="primer-caru">
-
+            <div class="destinos mt-[10vh]">
+                <h1 class="text-center eishun mb-[1.5vw]" style="text-shadow: 0 0 15px #333; text-decoration: underline;">DESTINOS TURISTICOS</h1>
+                <div class="primer-caru  w-full h-max flex justify-center gap-[4%] flex-wrap">
+                    <a href="" class="w-[30%] min-w-[350px] h-[40vh] bg-white flex justify-center items-center rounded-3xl mt-[3%] santo-domingo">
+                        <h1 class="eishun">Santo Domingo</h1>
+                    </a>
+                    <a href="" class="w-[30%] min-w-[350px] h-[40vh] bg-white flex justify-center items-center rounded-3xl mt-[3%] buggies">
+                        <h1 class="eishun" style="text-shadow: 0 0 20px black;">Buggies</h1>
+                    </a>
+                    <a href="" class="w-[30%] min-w-[350px] h-[40vh] bg-white flex justify-center items-center rounded-3xl mt-[3%] punta-cana">
+                        <h1 class="eishun">Punta Cana</h1>
+                    </a>
                 </div>
-                <div class="resenas">
-                    <h1 class="text-center text-[2.5vw]">QUE PIENSA LA GENTE DE NOSOTROS?</h1>
-                    <div class="segundo-caru">
-
+                <div class="resenas mt-[10vh]">
+                    <h1 class="text-center eishun mb-[5%]" style="text-decoration: underline;">QUE PIENSA LA GENTE DE NOSOTROS?</h1>
+                    <div class="segundo-caru w-full h-max flex justify-center gap-[4%] flex-wrap" style="font-weight: 900;">
+                          <div class="w-[30%] min-w-[300px] h-[80%] flex flex-col justify-center items-center mt-[3%]">
+                            <span><svg height="clamp(40px,4vw,3rem)" width="clamp(40px,4vw,3rem)" version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 512 512" xml:space="preserve" fill="#000000"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:#000000;} </style> <g> <path class="st0" d="M364.032,355.035c-3.862-1.446-8.072-3.436-12.35-5.794l-71.57,98.935l-5.09-64.814h-38.033l-5.091,64.814 l-71.569-98.935c-4.408,2.466-8.656,4.487-12.361,5.794c-37.478,13.193-129.549,51.136-123.607,122.21 C25.787,494.301,119.582,512,256.006,512c136.413,0,230.208-17.699,231.634-34.755 C493.583,406.102,401.273,368.961,364.032,355.035z"></path> <path class="st0" d="M171.501,208.271c5.21,29.516,13.966,55.554,25.494,68.38c0,15.382,0,26.604,0,35.587 c0,0.902-0.158,1.852-0.416,2.833l40.41,19.462v28.545h38.033v-28.545l40.39-19.452c-0.258-0.981-0.416-1.932-0.416-2.843 c0-8.983,0-20.205,0-35.587c11.548-12.826,20.304-38.864,25.514-68.38c12.143-4.338,19.096-11.281,27.762-41.658 c9.231-32.358-13.876-31.258-13.876-31.258c18.69-61.873-5.922-120.022-47.124-115.753c-28.426-49.73-123.627,11.36-153.48,7.102 c0,17.055,7.112,29.842,7.112,29.842c-10.379,19.69-6.378,58.951-3.446,78.809c-1.704-0.03-22.602,0.188-13.728,31.258 C152.405,196.99,159.338,203.934,171.501,208.271z"></path> </g> </g></svg></span>
+                        <h1 class="eishun"> Persona 1</h1>
+                        <p class="paragraf">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quia at modi aliquid laboriosam facilis autem veniam maiores ipsa ipsam aliquam, deserunt eaque expedita aspernatur ullam labore error blanditiis nam?</p>
+                    </div>
+                    <div class="w-[30%] min-w-[300px] h-[80%] flex flex-col justify-center items-center mt-[3%]">
+                        <span><svg height="clamp(40px,4vw,3rem)" width="clamp(40px,4vw,3rem)" fill="#000000" viewBox="-3 0 19 19" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"><path d="M12.517 12.834v1.9a1.27 1.27 0 0 1-1.267 1.267h-9.5a1.27 1.27 0 0 1-1.267-1.267v-1.9A3.176 3.176 0 0 1 3.65 9.667h5.7a3.176 3.176 0 0 1 3.167 3.167zM3.264 5.48A3.236 3.236 0 1 1 6.5 8.717a3.236 3.236 0 0 1-3.236-3.236z"></path></g></svg></span>
+                        <h1 class="eishun">Persona 2</h1>
+                        <p class="paragraf">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quia at modi aliquid laboriosam facilis autem veniam maiores ipsa ipsam aliquam, deserunt eaque expedita aspernatur ullam labore error blanditiis nam?</p>
+                    </div>
+                    <div class="w-[30%] min-w-[300px] h-[80%] flex flex-col justify-center items-center mt-[3%]">
+                        <span><svg height="clamp(40px,4vw,3rem)" width="clamp(40px,4vw,3rem)" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <g clip-path="url(#clip0_901_1404)"> <path d="M1 31C1 31 1.687 27.379 2 26C2.208 25.083 3 23 11 22C11 22 12 25 16 25C20 25 21 22 21 22C29 23 29.792 25.021 30 26C30.294 27.384 31 31 31 31M7 19.501L8 8C8.531 3.563 12.134 1 16 1C19.866 1 23.469 3.594 24 8L25 19.5M8 30V31M24 30V31M18.999 7C16 9 11 9 11 9C11 14 13 18 16 18C19 18 21 14 21 9" stroke="#000000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g> <defs> <clipPath id="clip0_901_1404"> <rect width="32" height="32" fill="white"></rect> </clipPath> </defs> </g></svg></span>
+                        <h1 class="eishun">Persona 3</h1>
+                        <p class="paragraf">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequuntur quia at modi aliquid laboriosam facilis autem veniam maiores ipsa ipsam aliquam, deserunt eaque expedita aspernatur ullam labore error blanditiis nam?</p>
+                    </div>
                     </div>
                 </div>
             </div>
@@ -55,20 +132,85 @@
     </main>
 
 
-    <footer>
-        <section>
-            <div></div>
-            <div></div>
-        </section>
+    <footer class="h-max mt-[10vh] pt-[20vh]" style="text-shadow: 0 0 15px #333;">
+        <section class="flex w-full relative items-center justify-center" style="gap: clamp(20px, calc(30vw + 20px), 50rem);">
+            <div class="w-1/4 flex flex-col items-center w-1/2">
+            <div class="">
+                <h1 class="alink text-center">Contactanos</h1>
+            </div>
+            <div class="flex justify-center gap-[2vw]">
+                <a href="" target="_blank" class="w-full">
+                    <svg height="clamp(20px,3vw,3rem)" width="clamp(20px,3vw,3rem)" style="filter:drop-shadow(0 0 15px #333)" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" 
+                            d="M3.50002 12C3.50002 7.30558 7.3056 3.5 12 3.5C16.6944 3.5 20.5 7.30558 20.5 12C20.5 16.6944 16.6944 20.5 12 20.5C10.3278 20.5 8.77127 
+                            20.0182 7.45798 19.1861C7.21357 19.0313 6.91408 18.9899 6.63684 19.0726L3.75769 19.9319L4.84173 17.3953C4.96986 17.0955 4.94379 16.7521 
+                            4.77187 16.4751C3.9657 15.176 3.50002 13.6439 3.50002 12ZM12 1.5C6.20103 1.5 1.50002 6.20101 1.50002 12C1.50002 13.8381 1.97316 15.5683 
+                            2.80465 17.0727L1.08047 21.107C0.928048 21.4637 0.99561 21.8763 1.25382 22.1657C1.51203 22.4552 1.91432 22.5692 2.28599 22.4582L6.78541 
+                            21.1155C8.32245 21.9965 10.1037 22.5 12 22.5C17.799 22.5 22.5 17.799 22.5 12C22.5 6.20101 17.799 1.5 12 1.5ZM14.2925 14.1824L12.9783 
+                            15.1081C12.3628 14.7575 11.6823 14.2681 10.9997 13.5855C10.2901 12.8759 9.76402 12.1433 9.37612 11.4713L10.2113 10.7624C10.5697 10.4582 
+                            10.6678 9.94533 10.447 9.53028L9.38284 7.53028C9.23954 7.26097 8.98116 7.0718 8.68115 7.01654C8.38113 6.96129 8.07231 7.046 7.84247 7.24659L7.52696 
+                            7.52195C6.76823 8.18414 6.3195 9.2723 6.69141 10.3741C7.07698 11.5163 7.89983 13.314 9.58552 14.9997C11.3991 16.8133 13.2413 17.5275 14.3186 
+                            17.8049C15.1866 18.0283 16.008 17.7288 16.5868 17.2572L17.1783 16.7752C17.4313 16.5691 17.5678 16.2524 17.544 15.9269C17.5201 15.6014 17.3389 
+                            15.308 17.0585 15.1409L15.3802 14.1409C15.0412 13.939 14.6152 13.9552 14.2925 14.1824Z" fill="#fff"></path> 
+                        </g>
+                    </svg>
+                </a>
+                <a href="" target="_blank" class="w-full"><svg height="clamp(20px,3vw,3rem)" width="clamp(20px,3vw,3rem)" style="filter:drop-shadow(0 0 15px #333)" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                    <g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 
+                        6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18ZM12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 
+                        16 12 16Z" fill="#fff"></path> <path d="M18 5C17.4477 5 17 5.44772 17 6C17 6.55228 17.4477 7 18 7C18.5523 7 19 6.55228 19 6C19 5.44772 18.5523 5 18 5Z" 
+                        fill="#fff"></path> <path fill-rule="evenodd" clip-rule="evenodd" d="M1.65396 4.27606C1 5.55953 1 7.23969 1 10.6V13.4C1 16.7603 1 18.4405 1.65396 
+                        19.7239C2.2292 20.8529 3.14708 21.7708 4.27606 22.346C5.55953 23 7.23969 23 10.6 23H13.4C16.7603 23 18.4405 23 19.7239 22.346C20.8529 21.7708 21.7708 
+                        20.8529 22.346 19.7239C23 18.4405 23 16.7603 23 13.4V10.6C23 7.23969 23 5.55953 22.346 4.27606C21.7708 3.14708 20.8529 2.2292 19.7239 1.65396C18.4405 
+                        1 16.7603 1 13.4 1H10.6C7.23969 1 5.55953 1 4.27606 1.65396C3.14708 2.2292 2.2292 3.14708 1.65396 4.27606ZM13.4 3H10.6C8.88684 3 7.72225 3.00156 6.82208 
+                        3.0751C5.94524 3.14674 5.49684 3.27659 5.18404 3.43597C4.43139 3.81947 3.81947 4.43139 3.43597 5.18404C3.27659 5.49684 3.14674 5.94524 3.0751 6.82208C3.00156 
+                        7.72225 3 8.88684 3 10.6V13.4C3 15.1132 3.00156 16.2777 3.0751 17.1779C3.14674 18.0548 3.27659 18.5032 3.43597 18.816C3.81947 19.5686 4.43139 20.1805 5.18404 
+                        20.564C5.49684 20.7234 5.94524 20.8533 6.82208 20.9249C7.72225 20.9984 8.88684 21 10.6 21H13.4C15.1132 21 16.2777 20.9984 17.1779 20.9249C18.0548 20.8533 
+                        18.5032 20.7234 18.816 20.564C19.5686 20.1805 20.1805 19.5686 20.564 18.816C20.7234 18.5032 20.8533 18.0548 20.9249 17.1779C20.9984 16.2777 21 15.1132 21 
+                        13.4V10.6C21 8.88684 20.9984 7.72225 20.9249 6.82208C20.8533 5.94524 20.7234 5.49684 20.564 5.18404C20.1805 4.43139 19.5686 3.81947 18.816 3.43597C18.5032 
+                        3.27659 18.0548 3.14674 17.1779 3.0751C16.2777 3.00156 15.1132 3 13.4 3Z" fill="#fff"></path>
+                    </g>
+                </svg>
+            </a>
+                <a href="" target="_blank" class="w-full"><svg height="clamp(20px,3vw,3rem)" width="clamp(20px,3vw,3rem)" style="filter:drop-shadow(0 0 15px #333)" fill="#fff" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                    <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M12 2.03998C6.5 2.03998 2 6.52998 2 12.06C2 
+                        17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.84998C10.44 7.33998 11.93 5.95998 14.22 5.95998C15.31 5.95998 16.45 6.14998 16.45 6.14998V8.61998H15.19C13.95 
+                        8.61998 13.56 9.38998 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96C15.9164 21.5878 18.0622 20.3855 19.6099 18.57C21.1576 16.7546 22.0054 14.4456 22 12.06C22 
+                        6.52998 17.5 2.03998 12 2.03998Z"></path> </g></svg></a>
+            </div>
+            </div>
+
+
+            <div class="w-3/4 flex justify-center">
+                <ul class="flex gap-[4vw] text-center" style="font-size: clamp(6px,3vw,2rem);">
+                    <a href=""><li>Inicio</li></a>
+                    <a href=""><li>Nosotros</li></a>
+                    <a href=""><li>Contacto</li></a>
+                </ul>
+            </div>
+        </section>  
         
-        <section>
-            <div></div>
-            <div></div>
-            <div></div>
+        <section class="flex w-full mt-[5%] justify-center gap-[3%] flex-wrap">
+            <div class="w-[30%] min-w-[250px] h-[80%] flex flex-col justify-center items-center">
+                        <h1 class="alink">Responsabilidad</h1>
+                        <p class="paragrafbot">Toda nuestras excursiones dispone de seguro de riesgo, desde que les recogemos hasta que les regresamos.</p>
+                    </div>
+                    <div class="w-[30%] min-w-[250px] h-[80%] flex flex-col justify-center items-center">
+                        <h1 class="alink">Encuentranos</h1>
+                        <p class="paragrafbot">Dirección: Boulevard turistico del este km. 88</p>
+                        <p class="paragrafbot">Lunes a viernes: de 9:00 a 17:00 h. Sábado y domingo: de 08:00 a 12:00 h.</p>
+                    </div>
+                    <div class="w-[30%] min-w-[250px] h-[80%] flex flex-col justify-center items-center">
+                        <h1 class="alink">Guia Turistico</h1>
+                        <p class="paragrafbot">Cada una de nuestras excursiones dispone de un Guia nacional de turismo, autorizado por el ministerio de turismo de La Republica Dominicana.</p>
+                    </div>
         </section>
 
-        <section>
-            <h1 class="text-center text-1xl">&COPY; Todos los derechos reservados - PUNTA CANA FUN</h1>
+        <section class="mt-[5%] border">
+            <h1 class="text-center copira">&COPY; Todos los derechos reservados - PUNTA CANA FUN</h1>
         </section>
     </footer>
 </body>
